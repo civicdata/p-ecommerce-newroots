@@ -1,0 +1,449 @@
+
+/* *****************************************************************************
+********************************************************************************
+*********************************   Web Fonts  *********************************
+********************************************************************************
+***************************************************************************** */
+
+@font-face {
+  font-family: 'Abolition Regular';
+  src: url('../fonts/abolition-regular-webfont.eot');
+  src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/abolition-regular-webfont.woff') format('woff'),
+       url('../fonts/abolition-regular-webfont.ttf') format('truetype');
+}
+
+/* *****************************************************************************
+********************************************************************************
+******************************  Base Layout Styles  ***************************
+********************************************************************************
+***************************************************************************** */
+
+/* forces the padding and border into the total width and height of the elements. The * is the universal selector, and applies to all elements on the page. */
+* {
+   box-sizing: border-box;
+}
+
+body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin-bottom: 170px;
+    }
+
+.wrap {
+  flex: 1;
+  height: calc(100vh - 116px); /* 100 % of viewport height minus the 100px footer height and 58px header height */
+}
+
+
+
+/* Main Nav */
+
+
+.newrootsBrand {
+  height: 60px;
+  margin-right: 10px;
+}
+
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+
+/* set the dropdown menu to scroll */
+.dropdown-menu.show {
+  max-height: 450px;
+  width: 200px;
+  font-size: 12px;
+  text-align: center;
+}
+
+#dropdown-menu-show {
+  overflow-y: auto;
+  width: 300px;
+}
+
+.dropdown-menu li {
+  margin: 0 auto;
+  padding: 5px 0 5px 5px;
+  border-bottom: 1px solid black;
+  font-size: 12px;
+}
+
+ .dropdown-menu a:hover {
+  text-decoration: none;
+  color: black;
+  background-color: light-grey;
+}
+
+/* list item styling */
+.nav-item {
+  font-size: 14px;
+}
+
+
+/*  home link styling */
+.nav-link {
+  margin-top: 4px;
+}
+
+
+/* home link styling */
+.nav-link:hover {
+  color: grey;
+  opacity: .5;
+}
+
+/* ordering link styling */
+.nav-ordering {
+  font-size: 10px;
+  color: black;
+}
+
+/* ordering link styling */
+.nav-ordering:hover {
+  text-decoration: none;
+  opacity: .8;
+  color: grey;
+}
+
+/* this styles the space between the buttons  */
+.container {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+/* this styles the buttons on the main nav */
+.btn {
+  font-size: 10px;
+  cursor: pointer;
+  margin: 5px 5px;
+  padding: 10px 0;
+  background: #f8f9fa;
+  color: black;
+  width: 135px;
+  height: auto;
+  border-radius: .5em;
+  text-align: center;
+}
+
+
+.btn:hover {
+  opacity: .75;
+  color: grey;
+}
+
+
+
+.carets {
+  /* add positioning styling  */
+  margin-left: 5px;
+}
+
+.dropdown-menu:hover {
+  cursor: pointer;
+}
+
+/*******************************************************************************
+********************************************************************************
+*****************************end main nav styling ******************************
+********************************************************************************
+*******************************************************************************/
+
+
+
+/*  header styling */
+.backgroundHeader {
+  height: 300px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+/* Container holding the image and the text */
+.backgroundHeader {
+    position: relative;
+    text-align: center;
+}
+
+/* Centered image caption text for the backgroundHeader: will need media queries for this. */
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 1.2em;
+    color: coral;
+    text-shadow: 2px 2px black;
+    width: 300px;
+}
+
+/* Centered image caption text for the backgroundHeader: will need media queries for this. */
+.centered2 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -55%);  /* apparently, -50% is the left: property value  */
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  font-size: 1.4em;
+  width: 300px;
+}
+
+/*  ------   Main Footer ---------- */
+div.bottom-margin {
+  height: 1px;
+  margin-bottom: 5px;
+
+}
+
+/*  ------   Main Footer ---------- */
+.main-footer {  /* footer elements expand to 100% page width by default. */
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  padding-top: 20px;
+  border-top: 2px solid black;
+  /*  lucked into creating a 3d type curved gradient;
+      later i'll use this for my nav menu div li list items background.  */
+  background: linear-gradient(0deg, black, transparent 80%),
+              linear-gradient(180deg, black, transparent 80%),
+              darkgrey;
+}
+
+.secondary-footer {
+  width: 100%;
+  background: grey;
+  padding: 20px 20px 20px 20px; /* this gives the paragraph elements some breathing room  */
+  margin:  20px 0;
+  margin-bottom: 60px;  /* this gives some room for the last link 'privacy' to appear when fully scrolled down after generating ingredient results.  */
+  border-top: solid black 2px;
+  background: linear-gradient(0deg, white, transparent 85%),
+              linear-gradient(180deg, white, transparent 85%),
+              black;
+}
+
+/* to-top link in the persistent sticky footer  */
+.to-top {
+  background: red url('../img/arrow.svg') no-repeat center;
+  background-size: 70%;
+  transform: rotate(180deg);  /*  this will rotate it 180 degrees. */
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  height: 35px;
+  width: 35px;
+  padding: 0 10px;
+  margin: 10px 40px 0px 0px;
+  border-radius: 50%;
+  border: white 1px solid;
+}
+
+
+/*******************************************************************************
+****************************** Base Element Styles *****************************
+*******************************************************************************/
+
+/* images for the body of the index.html page  */
+.freshStopMarketPhoto {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: solid 1px black;
+}
+
+.flex-3,
+.flex-2 {
+  margin: 0 auto;
+  text-align: center;
+  background: #ededed;
+}
+
+p {
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  font-size: .9em;
+  color: black;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 8px auto;
+}
+
+
+/*  links in paragraphs elements */
+p > a {
+  text-align: center;
+  font-size: .85em;
+  color: red;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+
+h1 {
+  font-size: 1.25em;
+  color: firebrick;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px auto;
+}
+
+h2 {
+  margin: 30px 0;
+}
+
+h2 > a {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .6em;
+  padding: 20px auto;
+  margin: 20px auto;
+  color: firebrick;
+  text-decoration: underline;
+
+}
+
+/*  Changing the default bullets for lists to no list-style */
+li {
+  list-style-type: none;
+}
+
+
+/* *****************************************************************************
+********************************************************************************
+**********************  CSS Flexbox-Layout.html styling ************************
+********************************************************************************
+*******************************************************************************/
+/* flex-3, row-3, flex-column-1, flex-column-2,
+   flex-column-3 are used throughout the website for responsive design.      */
+
+
+
+
+/*****************************************************************
+******************************************************************
+****************  Media Queries for the flex layout **************
+******************************************************************
+*****************************************************************/
+
+
+/* Here I am requesting that the child items be laid in a row horizontally
+  by targeting the child item of main-header2, and main-nav2 */
+
+/* additionally, laying out the two child items in the parent .row as flex items; flex-direction: row; by default  */
+  @media (min-width: 700px) {
+    .row-3 {
+      display: flex;
+      /* due ot the previous rule, the third column will wrap to a new line rather than share its line equally with the other two columns in the container.  */
+      flex-wrap: wrap;
+    }
+
+    /* ------ Flexbox  Layout------ */
+    /*  Three column layout main styles. */
+    /* Aligning items to the bottom of a column using flexbox */
+      .flex-3 {
+        background: #ededed;
+        padding: 15px;
+        border: white solid 3px;
+        flex: 1 33%;
+
+        flex-direction: column;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+    .row-2 {
+      display: flex;
+      /* due ot the previous rule, the third column will wrap to a new line rather than share its line equally with the other two columns in the container.  */
+      flex-wrap: wrap;
+    }
+
+    .flex-2 {
+      /* Aligning items to the bottom of a column using flexbox */
+          background: #ededed;
+          padding: 15px;
+          border: white solid 3px;
+          flex: 1 60%;
+          flex-direction: column;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+
+        .flex-column-1-text {
+          flex: 2.5;
+        }
+
+        #flex-4 {
+          order: -1;
+        }
+
+} /* end 700px media query */
+
+
+@media (min-width: 969px) {
+
+  #mission {
+    font-size: 3em;
+  }
+
+
+}
+
+
+
+
+@media (min-width: 1025px) {
+
+
+/*  will have the primary column grow at a rate of 1.4 times that of the other columns at 1025px or greater.  */
+/* at 1025px and above, I want to move the second column to the left so that the primary column 1 will be in the middle, so that
+balanced is achieved.  So I set the order to -1 */
+  /*.flex-column-2-text {
+    flex: 1 70%;
+    order: -1;
+  }*/
+
+/* at this 1025px breakpoint, I set flex-basis to 0, so that the columns will not breakdown, but instead remain on the same line.
+For example, if I set the basis to 200px, then below 200 px of column width, the columns would wrap to a new line. */
+  .flex-3 {
+    flex-basis: 0;
+  }
+
+  /* ---------- Fixed Positioning Example ------------ */
+  /* Using fixed position to keep the main-header and nav at the top of the viewport regardless of where they are on the page. */
+    .navbar {
+      position: fixed;
+      width: 100%;     /* I set width to 100% because when position is set to fixed, the main-header will only be as wide as its content. */                    /* So I override this to have a nice menu that stays with the user as they scroll down. */
+      top: 0;         /* This is to ensure that the main-header container stays put at the top of the page and follows the user as they scroll. */
+      z-index: 1000;
+    }
+
+  /* setting the margin for the header to the height of the main nav element so that is isn't overriden upon initial navigation */
+  .backgroundHeader  {
+    margin-top: 80px;
+  }
+
+
+
+} /* end media query for 1025px and greater  */
+
+/*******************************************************************************
+********************************************************************************
+***********************  end css flexbox layouts styles  ***********************
+********************************************************************************
+*******************************************************************************/
