@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="css/styles.css">  <!--I list this css file second in case I need to override the normalize.css file, as the last file listed takes precedence in the css stack -->
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".navbar">  <!-- this code creates a spyscroll to inform the user where they are in the site by highlighting active links  -->
 
 
-
-    <header>
+    <div class="wrap">
+      <header>
 
         <!-- main nav consisting of dropdown menus and collapsing menu using bootstrap -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
           <a class="navbar-brand order-1" href="index.html"><img src="img/newrootsBrand.png" class="newrootsBrand" alt="new roots brand"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -32,131 +32,284 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
               </li>
 
               <li class="nav-item dropdown">
-                <div class="container">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">ABOUT
-                    <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a tabindex="-1" href="#">MISSION, VISION, AND VALUES</a></li>
-                      <li class="dropdown-submenu">
-                        <a class="test" tabindex="-1" href="#">OUR PEOPLE<span class="carets">&blacktriangledown;</span></a>
-                        <ul class="dropdown-menu">
-                          <li><a tabindex="-1" href="#">STAFF</a></li>
-                          <li><a tabindex="-1" href="#">AMERICORPS VISTA</a></li>
-                          <li><a tabindex="-1" href="#">VOLUNTEERS AND INTERNS</a></li>
-                          <li><a tabindex="-1" href="#">BOARD OF DIRECTORS</a></li>
-                          <li><a tabindex="-1" href="#">OUR FARMERS AND FOOD</a></li>
-                          <li><a tabindex="-1" href="#">PARTNERS</a></li>
-                        </ul>
-                      </li>
-                      <li><a tabindex="-1" href="#">AWARDS AND HONORS</a></li>
-                      <li><a tabindex="-1" href="#">CALENDARS</a></li>
-                      <li><a tabindex="-1" href="#">NEWSLETTER</a></li>
-                      <li><a tabindex="-1" href="#">MEDIA</a></li>
-                      <li><a tabindex="-1" href="#">FACTS</a></li>
-                      <li><a tabindex="-1" href="#">CAREER</a></li>
-                    </ul>
-                  </div>
+                <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  About
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a href="mission.html">Mission, Vision, and Values</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="awards.html">Awards and Honors</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="calendars.html">Calendars</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="newsletter.html">Newsletter</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="media.html">Media</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="facts.html">Facts</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="career.html">Career</a>
                 </div>
-              </li>  <!-- end 'about' button dropdown menu -->
+              </li>
 
               <li class="nav-item dropdown">
-                <div class="container">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">DONATE
-                    <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a tabindex="-1" href="#">SUPPORTERS</a></li>
-                      <li><a tabindex="-1" href="#">DONATE HERE</a></li>
-                  </div>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Donate
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a href="supporters.html">Supporters</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="donate-here.html">Donate Here</a>
                 </div>
-              </li>  <!-- end 'donate' button dropdown menu -->
+              </li>
 
               <li class="nav-item dropdown">
-                <div class="container">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">FRESH STOP MARKETS
-                    <span class="caret"></span></button>
-                    <ul id="dropdown-menu-show" class="dropdown-menu">
-                      <li><a tabindex="-1" href="#">BERRYTOWN FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">BRANDENBURG FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">CASTLEWOOD FRESH STOP MARKET - LEXINGTON</a></li>
-                      <li><a tabindex="-1" href="#">CHICKASAW FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">EAST END FRESH STOP MARKET - LEXINGTON</a></li>
-                      <li><a tabindex="-1" href="#">GENDLER GRAPEVINE FRESH STOP MARKET @ THE J</a></li>
-                      <li><a tabindex="-1" href="#">HAZARD FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">JEFFERSONVILLE FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">NEW ALBANY FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">OLD LOUISVILLE FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">PARKLAND FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">PORTLAND FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">RUSSEL FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">SHAWNEE FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">SMOKETOWN FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">SUN VALLEY FRESH STOP MARKET</a></li>
-                      <li><a tabindex="-1" href="#">WOODHILL FRESH STOP MARKET</a></li>
-                  </div>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Fresh Stop Markets
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a href="#">Berrytown</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Brandonburg</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Castlewood - Lexington</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Chickasaw</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">East End - Lexington</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Gendler Grapevine @ The J</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Hazard</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Jeffersonville</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">New Albany</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Old Louisville</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Parkland</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Portland</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Russel</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Shawnee</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Smoketown</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Sun Valley</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Woodhill</a>
                 </div>
-              </li>  <!-- end 'fresh stop markets' button dropdown menu -->
+              </li>
 
               <li class="nav-item dropdown">
-                <div class="container">
-                  <div class="dropdown">
-                    <button class="btn btn-default"><a class="nav-ordering" href="ordering.html">ORDERING</a></button>
-                  </div>
-                </div>
-              </li>  <!-- end 'ordering' button dropdown menu -->
+                <a class="nav-link" href="order.html" id="#order">
+                  Orders
+                </a>
+              </li>
 
               <li class="nav-item dropdown">
-                <div class="container">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">MORE...
-                    <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li class="dropdown-submenu">
-                        <a class="test" tabindex="-1" href="#">INITIATIVES<span class="carets">&blacktriangledown;</span></a>
-                        <ul class="dropdown-menu">
-                          <li><a tabindex="-1" href="#">COOK TO THE ROOT! COCKTAIL RECEPTION</a></li>
-                          <li><a tabindex="-1" href="#">THANKSGIVING FARMER APPRECIATION EVENT</a></li>
-                          <li><a tabindex="-1" href="#">STRAWBERRY JAM FESTIVAL</a></li>
-                          <li><a tabindex="-1" href="#">FOOD JUSTICE WORKSHOPS AND FRESH STOP TRAINING INSTITUTE</a></li>
-                          <li><a tabindex="-1" href="#">MAKEBA LEE FUND</a></li>
-                          <li><a tabindex="-1" href="#">GENDLER GRAPEVINE INTERFAITH FOOD JUSTICE</a></li>
-                          <li><a tabindex="-1" href="#">OTHER EVENTS</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown-submenu">
-                        <a class="test" tabindex="-1" href="#">BLOGS<span class="carets">&blacktriangledown;</span></a>
-                        <ul class="dropdown-menu">
-                          <li><a tabindex="-1" href="#">CHIVE TALKIN'</a></li>
-                          <li><a tabindex="-1" href="#">FRESH BITES</a></li>
-                        </ul>
-                      </li>
-                      <li><a tabindex="-1" href="#">CONTACT</a></li>
-                    </ul>
-                  </div>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Our People
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a href="#">Staff</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Americorps Vista</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Volunteers and Interns</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Board of Directors</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Our Farmers and Food</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Partners</a>
                 </div>
-              </li>  <!-- end 'more...' button dropdown menu -->
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Initiatives
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a href="#">'Cook to the Root!' Cocktail Reception</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Thanksgiving Farmers Appreciation Event</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Strawberry Jam Festival</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Food Justice Workshops And Fresh Stop Training Institute</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Makeba Lee Fund</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Gendler Grapevine Interfaith Food Justice</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#">Other Events</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Blogs
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a href="chive-talkin.html">Chive Talkin'</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="fresh-bites.html">Fresh Bites</a>
+
+                </div>
+              </li>
+
 
             </ul>
           </div>
-        </nav>  <!-- end main nav -->
+        </nav>
 
 
-       <div class="backgroundHeader1">
-          <img src="img/newrootsBackgroundHeader.jpg" class="backgroundHeader" alt="new roots header image of vegetables">
-          <div class="centered"><b>&Tilde;  WELCOME TO NEW ROOTS  &Tilde;  </b></div>
-          <div class="centered2"><b>We believe that fresh food is a basic human right.</b></div>
-       </div>
 
-    </header>
 
-    <!-- begin wrap -->
-    <div class="wrap">
+
+
+          <!--
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand order-1" href="index.html"><img src="img/newrootsBrand.png" class="newrootsBrand" alt="new roots brand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <div class="container">
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">ABOUT
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">MISSION, VISION, AND VALUES</a></li>
+                        <li class="dropdown-submenu">
+                          <a class="test" tabindex="-1" href="#">OUR PEOPLE<span class="carets">&blacktriangledown;</span></a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">STAFF</a></li>
+                            <li><a tabindex="-1" href="#">AMERICORPS VISTA</a></li>
+                            <li><a tabindex="-1" href="#">VOLUNTEERS AND INTERNS</a></li>
+                            <li><a tabindex="-1" href="#">BOARD OF DIRECTORS</a></li>
+                            <li><a tabindex="-1" href="#">OUR FARMERS AND FOOD</a></li>
+                            <li><a tabindex="-1" href="#">PARTNERS</a></li>
+                          </ul>
+                        </li>
+                        <li><a tabindex="-1" href="#">AWARDS AND HONORS</a></li>
+                        <li><a tabindex="-1" href="#">CALENDARS</a></li>
+                        <li><a tabindex="-1" href="#">NEWSLETTER</a></li>
+                        <li><a tabindex="-1" href="#">MEDIA</a></li>
+                        <li><a tabindex="-1" href="#">FACTS</a></li>
+                        <li><a tabindex="-1" href="#">CAREER</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <div class="container">
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">DONATE
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">SUPPORTERS</a></li>
+                        <li><a tabindex="-1" href="#">DONATE HERE</a></li>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <div class="container">
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">FRESH STOP MARKETS
+                      <span class="caret"></span></button>
+                      <ul id="dropdown-menu-show" class="dropdown-menu">
+                        <a href="#">BERRYTOWN FRESH STOP MARKET</a>
+                        <a href="#">BRANDENBURG FRESH STOP MARKET</a>
+                        <a href="#">CASTLEWOOD FRESH STOP MARKET - LEXINGTON</a>
+                        <a href="#">CHICKASAW FRESH STOP MARKET</a>
+                        <a href="#">EAST END FRESH STOP MARKET - LEXINGTON</a>
+                        <a href="#">GENDLER GRAPEVINE FRESH STOP MARKET @ THE J</a>
+                        <a href="#">HAZARD FRESH STOP MARKET</a>
+                        <a href="#">JEFFERSONVILLE FRESH STOP MARKET</a>
+                        <a href="#">NEW ALBANY FRESH STOP MARKET</a>
+                        <a href="#">OLD LOUISVILLE FRESH STOP MARKET</a>
+                        <a href="#">PARKLAND FRESH STOP MARKET</a>
+                        <a href="#">PORTLAND FRESH STOP MARKET</a>
+                        <a href="#">RUSSEL FRESH STOP MARKET</a>
+                        <a href="#">SHAWNEE FRESH STOP MARKET</a>
+                        <a href="#">SMOKETOWN FRESH STOP MARKET</a>
+                        <a href="#">SUN VALLEY FRESH STOP MARKET</a>
+                        <a href="#">WOODHILL FRESH STOP MARKET</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <div class="container">
+                    <div class="dropdown">
+                      <button class="btn btn-default"><a class="nav-ordering" href="ordering.html">ORDERING</a></button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <div class="container">
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">MORE...
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                          <a class="test" tabindex="-1" href="#">INITIATIVES<span class="carets">&blacktriangledown;</span></a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">COOK TO THE ROOT! COCKTAIL RECEPTION</a></li>
+                            <li><a tabindex="-1" href="#">THANKSGIVING FARMER APPRECIATION EVENT</a></li>
+                            <li><a tabindex="-1" href="#">STRAWBERRY JAM FESTIVAL</a></li>
+                            <li><a tabindex="-1" href="#">FOOD JUSTICE WORKSHOPS AND FRESH STOP TRAINING INSTITUTE</a></li>
+                            <li><a tabindex="-1" href="#">MAKEBA LEE FUND</a></li>
+                            <li><a tabindex="-1" href="#">GENDLER GRAPEVINE INTERFAITH FOOD JUSTICE</a></li>
+                            <li><a tabindex="-1" href="#">OTHER EVENTS</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                          <a class="test" tabindex="-1" href="#">BLOGS<span class="carets">&blacktriangledown;</span></a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">CHIVE TALKIN'</a></li>
+                            <li><a tabindex="-1" href="#">FRESH BITES</a></li>
+                          </ul>
+                        </li>
+                        <li><a tabindex="-1" href="#">CONTACT</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </nav>  -->
+
+
+         <div class="backgroundHeader1">
+            <img src="img/newrootsBackgroundHeader.jpg" class="backgroundHeader" alt="new roots header image of vegetables">
+            <div class="centered"><b>&Tilde;  WELCOME TO NEW ROOTS  &Tilde;  </b></div>
+            <div class="centered2"><b>We believe that fresh food is a basic human right.</b></div>
+         </div>
+
+      </header>
+
+
 
         <!-- Begin three-column layout using flexbox -->
         <div class="row-3">
@@ -195,7 +348,7 @@
             <p>We need your help organizing for the 2018 Fresh Stop Market Season!</p>
             <p>Everyone is welcome to the <a href="food-justice-workshops-and-fresh-stop-training-institute.html">2018 Food Justice Workshops and Fresh Stop Market
               Training Institute</a> starting February 2018.  Please call 502.509.6770 for details.</p>
-              <img src="img/ourBlogs.jpeg" class="freshStopMarketPhotoPlaceholderImage" alt="local chef at her table of food">
+              <img src="img/tomato.jpg" class="freshStopMarketPhotoTomato" alt="tomato photo">
           </div>  <!-- end flex-column-1 div -->
 
           <!-- begin flex-column 2 -->
@@ -215,7 +368,7 @@
         <div class="row-2">
           <!-- begin flex-column-1 div -->
           <div class="flex-column-1-text flex-2">
-            <h3>Contact US</h3>
+            <h3>Contact Us</h3>
             <p>PHONE: 502.509.6770</p>
             <p>EMAIL:<a href="mailto:info@newroots.org.com?Subject=Hello%20again" target="_top"> info@newroots.org</a></p>
             <p>HOURS: 9 am-5 pm on Monday-Friday</p>
@@ -233,29 +386,17 @@
         </div> <!-- end 2-column row layout div -->
 
 
+      <footer class="secondary-footer">
+        <p>&copy; 2018 newroots.org</p>
+      </footer>
+
+      <!-- sticky footer: fixed position-->
+      <footer class="main-footer">
+      <a href='#top' title="TOP" class='to-top'></a>
+      </footer>
 
 
-
-
-
-
-    <footer class="secondary-footer">
-      <p>&copy; 2018 newroots.org</p>
-    </footer>
-
-    <div class="bottom-margin">
-      <!-- bottomMarginDiv -->
-    </div>
-
-  </div> <!-- end .wrap div  -->
-
-
-
-  <!-- sticky footer: fixed position-->
-  <footer class="main-footer">
-  <a href='#top' title="TOP" class='to-top'></a>
-  </footer>
-
+    </div> <!-- end .wrap div  -->
 
 
 

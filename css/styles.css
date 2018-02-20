@@ -48,160 +48,51 @@ header {
 
 
 /* Main Nav */
-
 .navbar {
-  border-bottom: 1px solid black;
+   border-bottom: 1px solid black;
 }
 
 
 /* styling for the newroots logo and slogan on the main nav bar  */
 .newrootsBrand {
-  height: 55px;
+  height: 70px;
 }
 
-/* sets the position from which to base other submenus */
-.dropdown-submenu {
-    position: relative;
-}
-
-
-/* sets the position of the various dropdown menus */
-.dropdown-submenu .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -1px;
-}
-
-/* styling for the primary dropdown menu on hover */
-li .dropdown-menu li:hover {
-  background-color: lightgrey;
-}
-
-/*  styling for the submenu secondary dropdown, on hover  */
-li .dropdown-submenu li:hover {
-  background-color: darkgreen;
-}
-
-/* styles the submenu list item background  */
-.dropdown-submenu li {
-  background: black;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* this styles the submenu link items to help distiguish the separate menu items */
-.dropdown-submenu li a {
-  color: lime;
-}
-
-/* styles the submenu links on hover  */
-.dropdown-submenu li a:hover {
-  color: white;
-}
-
-.dropdown-menu:hover {
-  cursor: pointer;
-}
 
 /* this allows for scrolling of the 'fresh stop market' dropdown menu */
-#dropdown-menu-show {
+.dropdown-menu {
   max-height: 450px;
   overflow-y: auto;
   width: 300px;
-}
-
-/* this centers the list items on the dropdown menu and gives borders to the li */
-.dropdown-menu li {
-  padding: 5px 5px;
-  border-bottom: 1px solid lime;
-  font-size: 12px;
   text-align: center;
-  margin: 0;
-}
-
-.dropdown-menu li ul {
-  padding: 0;
-  margin: 0;
-}
-
-
-/* styling for the padding for the dropdown menu list items */
-.dropdown-menu {
-  padding: 0px;
+  padding: 20px;
+  background: black;
 }
 
 /* color of the links in the dropdown menus */
 .dropdown-menu a {
-  color: green;
+  color: lightgreen;
 }
 
  .dropdown-menu a:hover {
   text-decoration: none;
-  color: black;
+  color: lime;
 }
 
-/* list item styling */
+/* main-link 'home' 'about' etc.... item styling */
 .nav-item {
   font-size: 14px;
 }
 
-/*  home link styling */
+
 .nav-link {
-  margin-top: 4px;
+  margin-left: 10px;
 }
 
 /* home link styling */
 .nav-link:hover {
-  color: grey;
-  opacity: .5;
-}
-
-/* ordering link styling */
-.nav-ordering {
-  font-size: 10px;
   color: black;
-}
 
-/* ordering link styling */
-.nav-ordering:hover {
-  text-decoration: none;
-  opacity: .8;
-  color: grey;
-}
-
-/* this styles the space between the buttons  */
-.container {
-  margin: 0px;
-  padding: 0px;
-
-}
-
-/* this styles the buttons on the main nav */
-.btn {
-  font-size: 10px;
-  cursor: pointer;
-  margin: 5px 5px;
-  padding: 10px 0;
-  background: #f8f9fa;
-  color: black;
-  width: 135px;
-  height: auto;
-  border-radius: .5em;
-  text-align: center;
-}
-
-
-.btn:hover {
-  opacity: .75;
-  color: grey;
-}
-
-
-
-.carets {
-  /* add positioning styling  */
-  margin-left: 5px;
 }
 
 
@@ -225,6 +116,7 @@ li .dropdown-submenu li:hover {
 .backgroundHeader1 {
     position: relative;
     text-align: center;
+    margin-top: 0px;
 }
 
 /* Centered image caption text for the backgroundHeader: will need media queries for this. */
@@ -251,12 +143,6 @@ li .dropdown-submenu li:hover {
   width: 300px;
 }
 
-/*  ------   Main Footer ---------- */
-div.bottom-margin {
-  height: 1px;
-  margin-bottom: 5px;
-
-}
 
 /*  ------   Main Footer ---------- */
 .main-footer {  /* footer elements expand to 100% page width by default. */
@@ -280,7 +166,7 @@ div.bottom-margin {
   background: grey;
   padding: 20px 20px 20px 20px; /* this gives the paragraph elements some breathing room  */
   margin:  20px 0;
-  margin-bottom: 60px;  /* this gives some room for the last link 'privacy' to appear when fully scrolled down after generating ingredient results.  */
+  margin-bottom: 45px;  /* this gives some room for the last link 'privacy' to appear when fully scrolled down after generating ingredient results.  */
   border-top: solid black 2px;
   background: linear-gradient(0deg, lightgreen, transparent 85%),
               linear-gradient(180deg, lightgreen, transparent 85%),
@@ -289,7 +175,7 @@ div.bottom-margin {
 
 /* to-top link in the persistent sticky footer  */
 .to-top {
-  background: red url('../img/arrow.svg') no-repeat center;
+  background: lime url('../img/arrow.svg') no-repeat center;
   background-size: 70%;
   transform: rotate(180deg);  /*  this will rotate it 180 degrees. */
   position: absolute;
@@ -320,7 +206,7 @@ div.bottom-margin {
 
 /*  i need to add a new and different image to the 'we need your help' element flex column.  */
 /* images for the 'we need your help' element of the index.html page  */
-.freshStopMarketPhotoPlaceholderImage {
+.freshStopMarketPhotoTomato {
   width: 90%;
   margin: 50px auto;
   border: solid 1px black;
@@ -335,7 +221,7 @@ div.bottom-margin {
   margin-bottom: 10px;
   text-align: center;
   background: white;
-  border: 1px solid red;
+
   box-shadow: 0 1.5px 0 0 black;
   padding-bottom: 30px;
 }
@@ -427,12 +313,13 @@ li {
     /* Aligning items to the bottom of a column using flexbox */
       .flex-3 {
         padding: 15px;
-        flex: 1 50%;
+        flex: 1 33%;
         flex-direction: column;
         margin-left: 5px;
         margin-right: 5px;
         margin-bottom: 10px;
         text-align: center;
+        border: 1px solid red;
       }
 
     .row-2 {
@@ -450,6 +337,7 @@ li {
           margin-right: 5px;
           margin-bottom: 10px;
           text-align: center;
+          border: 1px solid red;
         }
 
         .flex-column-1-text {
@@ -481,7 +369,35 @@ li {
     }
 
 
-}
+}  /* end 969 media query */
+
+@media (min-width: 990px) {
+
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  /* ---------- Fixed Positioning Example ------------ */
+  /* Using fixed position to keep the main-header and nav at the top of the viewport regardless of where they are on the page. */
+  .navbar {
+    position: fixed;
+    width: 100%;     /* I set width to 100% because when position is set to fixed, the main-header will only be as wide as its content. */                    /* So I override this to have a nice menu that stays with the user as they scroll down. */
+    top: 0;         /* This is to ensure that the main-header container stays put at the top of the page and follows the user as they scroll. */
+    z-index: 1000;
+    border-bottom: 1px solid black;
+  }
+
+  .newrootsBrand {
+    height: 55px;
+  }
+
+  .backgroundHeader1 {
+    margin-top: 80px;
+  }
+
+
+}  /* end 990 media query */
 
 
 
@@ -489,38 +405,59 @@ li {
 @media (min-width: 1025px) {
 
 
-/*  will have the primary column grow at a rate of 1.4 times that of the other columns at 1025px or greater.  */
-/* at 1025px and above, I want to move the second column to the left so that the primary column 1 will be in the middle, so that
-balanced is achieved.  So I set the order to -1 */
-  /*.flex-column-2-text {
-    flex: 1 70%;
-    order: -1;
-  }*/
-
 /* at this 1025px breakpoint, I set flex-basis to 0, so that the columns will not breakdown, but instead remain on the same line.
 For example, if I set the basis to 200px, then below 200 px of column width, the columns would wrap to a new line. */
   .flex-3 {
     flex-basis: 0;
   }
 
-  /* ---------- Fixed Positioning Example ------------ */
-  /* Using fixed position to keep the main-header and nav at the top of the viewport regardless of where they are on the page. */
-    .navbar {
-      position: fixed;
-      width: 100%;     /* I set width to 100% because when position is set to fixed, the main-header will only be as wide as its content. */                    /* So I override this to have a nice menu that stays with the user as they scroll down. */
-      top: 0;         /* This is to ensure that the main-header container stays put at the top of the page and follows the user as they scroll. */
-      z-index: 1000;
-    }
-
     /* setting the margin for the header to the height of the main nav element so that is isn't overriden upon fixed navigation @ 1025px and greater.  */
     .backgroundHeader1  {
       margin-top: 80px;
     }
 
+    .backgroundHeader {
+      height: 500px;
+    }
+
+
 
 
 } /* end media query for 1025px and greater  */
 
+
+
+@media (min-width: 1050px) {
+
+  .newrootsBrand {
+    height: 70px;
+  }
+
+  /* setting the margin for the header to the height of the main nav element so that is isn't overriden upon fixed navigation @ 1050px and greater.  */
+  .backgroundHeader1  {
+    margin-top: 96px;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+  .newrootsBrand {
+    height: 100px;
+  }
+
+  /* setting the margin for the header to the height of the main nav element so that is isn't overriden upon fixed navigation @ 1200px and greater.  */
+  .backgroundHeader1  {
+    margin-top: 126px;
+  }
+
+}
 /*******************************************************************************
 ********************************************************************************
 ***********************  end css flexbox layouts styles  ***********************
