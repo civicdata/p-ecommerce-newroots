@@ -41,23 +41,18 @@ header {
 }
 
 .wrap {
-  flex: 1;
-  height: calc(100vh - 446px); /* 100 % of viewport height minus the 300 header image height, 86 nav height,  60 footer height */
+  height: calc(100vh); /* 100 % of viewport height minus the 95 nav height,  40 footer height */
 }
-
-
 
 /* Main Nav */
 .navbar {
    border-bottom: 1px solid black;
 }
 
-
 /* styling for the newroots logo and slogan on the main nav bar  */
 .newrootsBrand {
   height: 70px;
 }
-
 
 /* this allows for scrolling of the 'fresh stop market' dropdown menu */
 .dropdown-menu {
@@ -66,7 +61,9 @@ header {
   width: 300px;
   text-align: center;
   padding: 20px;
-  background: black;
+  background: linear-gradient(0deg, black, transparent 80%),
+              linear-gradient(180deg, black, transparent 80%),
+              darkgrey;
 }
 
 /* color of the links in the dropdown menus */
@@ -125,7 +122,7 @@ header {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -30%);
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: crimson;
     text-shadow: 2px 2px black;
     width: 350px;
@@ -139,7 +136,7 @@ header {
   transform: translate(-50%, -55%);  /* apparently, -50% is the left: property value  */
   color: lightgreen;
   text-shadow: 3px 3px  2px black;   /* third px value would be a blur effect */
-  font-size: 1.4em;
+  font-size: 1.3em;
   width: 300px;
 }
 
