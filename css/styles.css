@@ -30,14 +30,13 @@ body {
       background: white;
     }
 
-
 /* giving some breathing room to the header element */
 header {
   margin-bottom: 10px;
 }
 
 .wrap {
-  height: calc(100vh); /* 100 % of viewport height minus the 95 nav height,  40 footer height */
+  height: calc(100vh); /* 100 % of viewport height  */
 }
 
 /* Main Nav */
@@ -82,12 +81,11 @@ header {
   margin-left: 10px;
 }
 
-/* home link styling */
+/* main-nav link styling */
 .nav-link:hover {
   color: black;
 
 }
-
 
 /*******************************************************************************
 ********************************************************************************
@@ -136,9 +134,8 @@ header {
   width: 300px;
 }
 
-
-/*  ------   Main Footer ---------- */
-.main-footer {  /* footer elements expand to 100% page width by default. */
+/*  ------   Footers ---------- */
+.main-footer {  /* sticky-footer */
   position: fixed;
   bottom: 0;
   z-index: 999;
@@ -147,8 +144,6 @@ header {
   height: 45px;
   padding-top: 20px;
   border-top: 2px solid black;
-  /*  lucked into creating a 3d type curved gradient;
-      later i'll use this for my nav menu div li list items background.  */
   background: linear-gradient(0deg, black, transparent 80%),
               linear-gradient(180deg, black, transparent 80%),
               red;
@@ -159,14 +154,14 @@ header {
   background: grey;
   padding: 20px 20px 20px 20px; /* this gives the paragraph elements some breathing room  */
   margin:  20px 0;
-  margin-bottom: 45px;  /* this gives some room for the last link 'privacy' to appear when fully scrolled down after generating ingredient results.  */
+  margin-bottom: 45px;  /* margin to clear at scroll's end the sticky-footer's constant bottom 45px height */
   border-top: solid black 2px;
   background: linear-gradient(0deg, lightgreen, transparent 85%),
               linear-gradient(180deg, lightgreen, transparent 85%),
               darkgreen;
 }
 
-/* to-top link in the persistent sticky footer  */
+/* to-top href=#top circle-styled element in the persistent sticky footer  */
 .to-top {
   background: lime url('../img/arrow.svg') no-repeat center;
   background-size: 70%;
@@ -193,7 +188,7 @@ header {
   margin: 0 auto;
   margin-bottom: 20px;
   border: solid 1px black;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 
@@ -207,6 +202,8 @@ header {
   height: 250px;
 }
 
+
+/* flex-containers holding individual flex-items */
 .flex-3,
 .flex-2 {
   width: 95%;
@@ -214,13 +211,12 @@ header {
   margin-bottom: 10px;
   text-align: center;
   background: white;
-
   box-shadow: 0 1.5px 0 0 black;
   padding-bottom: 30px;
 }
 
 p {
-  width: 100%;
+  width: 95%;
   max-width: 800px;
   text-align: center;
   font-size: .9em;
@@ -230,7 +226,6 @@ p {
   margin: 8px auto;
 }
 
-
 /*  links in paragraphs elements */
 p > a {
   text-align: center;
@@ -239,7 +234,6 @@ p > a {
   margin: 0 auto;
   text-decoration: underline;
 }
-
 
 h1 {
   font-size: 1.25em;
@@ -281,40 +275,64 @@ li {
    flex-column-3 are used throughout the website for responsive design.      */
 
 
-
-
 /*****************************************************************
 ******************************************************************
-****************  Media Queries for the flex layout **************
+***************************  Media Queries   *********************
 ******************************************************************
 *****************************************************************/
 
 
-/* Here I am requesting that the child items be laid in a row horizontally
-  by targeting the child item of main-header2, and main-nav2 */
+  /* Here I am requesting that the child items be laid in a row horizontally
+    by targeting the child item of main-header2, and main-nav2 */
 
-/* additionally, laying out the two child items in the parent .row as flex items; flex-direction: row; by default  */
+  /* additionally, laying out the two child items in the parent .row as flex items; flex-direction: row; by default  */
   @media (min-width: 700px) {
+
+    /* Centered image caption text for the backgroundHeader: will need media queries for this. */
+    .centered {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        font-size: 1.4em;
+        color: crimson;
+        text-shadow: 2px 2px black;
+        width: 600px;
+    }
+
+    /* Centered image caption text for the backgroundHeader: will need media queries for this. */
+    .centered2 {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -55%);  /* apparently, -50% is the left: property value  */
+      color: lightgreen;
+      text-shadow: 3px 3px  2px black;   /* third px value would be a blur effect */
+      font-size: 1.5em;
+      width: 600px;
+    }
+
+    /* flex parent container holding three flex-column items */
     .row-3 {
       display: flex;
-      /* due ot the previous rule, the third column will wrap to a new line rather than share its line equally with the other two columns in the container.  */
       flex-wrap: wrap;
       flex-direction: row;
     }
 
     /* ------ Flexbox  Layout------ */
     /*  Two column layout styles. */
-    /* Aligning items to the bottom of a column using flexbox */
-      .flex-3 {
-        padding: 15px;
-        flex: 1 33%;
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-bottom: 10px;
-        text-align: center;
-        border: 1px solid red;
-      }
+    /* Aligning items in a row using flexbox */
+    .flex-3 {
+      padding: 15px;
+      margin-left: 5px;
+      margin-right: 5px;
+      flex: 1 48%;
+      margin-bottom: 10px;
+      text-align: center;
+      border: 1px solid red;
+    }
 
+    /* parent container for 2-column flex items */
     .row-2 {
       display: flex;
       /* due ot the previous rule, the third column will wrap to a new line rather than share its line equally with the other two columns in the container.  */
@@ -322,10 +340,11 @@ li {
       flex-direction: row;
     }
 
+    /* div holding each flex-column child-items for 2-column layout */
     .flex-2 {
-      /* Aligning items to the bottom of a column using flexbox */
+    /* Aligning items to the bottom of a column using flexbox */
           padding: 15px;
-          flex: 1 60%;
+          flex: 1;
           margin-left: 5px;
           margin-right: 5px;
           margin-bottom: 10px;
@@ -333,40 +352,54 @@ li {
           border: 1px solid red;
         }
 
-        .flex-column-1-text {
-          flex: 2.5;
-        }
+   /* 2nd column div in 2-column flex-layout  */
+      .flex-column-2-text {
+        flex: 2.5;
+      }
 
-        #flex-4 {
-          order: -1;
-        }
+   /* changed the order of the 'We will be back up and running' div to be placed on the far left side of the viewport */
+      #flex-4 {
+        order: -1;
+      }
 
 } /* end 700px media query */
 
-
 @media (min-width: 969px) {
-
+  /* mission statement font increase */
   #mission {
     font-size: 3em;
   }
-
-  /* ------ Flexbox  Layout------ */
-  /*  Two column layout styles. */
-  /* Aligning items to the bottom of a column using flexbox */
-    .flex-3 {
-      padding: 15px;
-      flex: 1 33%;
-      flex-direction: column;
-      margin-bottom: 10px;
-      text-align: center;
-    }
 
 
 }  /* end 969 media query */
 
 @media (min-width: 990px) {
 
+  /* Centered image caption text for the backgroundHeader: */
+  .centered {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      font-size: 1.7em;
+      color: crimson;
+      text-shadow: 2px 2px black;
+      width: 600px;
+  }
 
+  /* Centered image caption text for the backgroundHeader */
+  .centered2 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);  /* apparently, -50% is the left: property value  */
+    color: lightgreen;
+    text-shadow: 3px 3px  2px black;   /* third px value would be a blur effect */
+    font-size: 1.9em;
+    width: 600px;
+  }
+
+  /* main-nav font-size */
   .nav-link {
     font-size: 13px;
   }
@@ -381,10 +414,12 @@ li {
     border-bottom: 1px solid black;
   }
 
+  /* this is the newroots logo on the main-nav */
   .newrootsBrand {
     height: 55px;
   }
 
+  /* this is the div that holds the header img text overlay */
   .backgroundHeader1 {
     margin-top: 80px;
   }
@@ -393,13 +428,36 @@ li {
 }  /* end 990 media query */
 
 
-
-
 @media (min-width: 1025px) {
 
 
-/* at this 1025px breakpoint, I set flex-basis to 0, so that the columns will not breakdown, but instead remain on the same line.
-For example, if I set the basis to 200px, then below 200 px of column width, the columns would wrap to a new line. */
+  /* Centered image caption text for the backgroundHeader  */
+  .centered {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      font-size: 1.7em;
+      color: crimson;
+      text-shadow: 2px 2px black;
+      width: 600px;
+  }
+
+  /* Centered image caption text for the backgroundHeader */
+  .centered2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);  /* apparently, -50% is the left: property value  */
+    color: lightgreen;
+    text-shadow: 3px 3px  2px black;   /* third px value would be a blur effect */
+    font-size: 1.9em;
+    width: 600px;
+  }
+
+
+  /* at this 1025px breakpoint, I set flex-basis to 0, so that the columns will not breakdown, but instead remain on the same line.
+  For example, if I set the basis to 200px, then below 200 px of column width, the columns would wrap to a new line. */
   .flex-3 {
     flex-basis: 0;
   }
@@ -409,6 +467,7 @@ For example, if I set the basis to 200px, then below 200 px of column width, the
       margin-top: 80px;
     }
 
+    /* img styling for the header img with the text overlay 'Welcome to Newroots' ... */
     .backgroundHeader {
       height: 500px;
     }
@@ -419,9 +478,8 @@ For example, if I set the basis to 200px, then below 200 px of column width, the
 } /* end media query for 1025px and greater  */
 
 
-
 @media (min-width: 1050px) {
-
+  /* this is the newroots logo on the main-nav */
   .newrootsBrand {
     height: 70px;
   }
@@ -436,11 +494,11 @@ For example, if I set the basis to 200px, then below 200 px of column width, the
 
 @media (min-width: 1200px) {
 
-
+   /* font  size increase for main-nav links */
   .nav-link {
     font-size: 15px;
   }
-
+  /* this is the newroots logo on the main-nav */
   .newrootsBrand {
     height: 100px;
   }
