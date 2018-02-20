@@ -24,6 +24,8 @@
    box-sizing: border-box;
 }
 
+
+
 body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height: 1.6;
@@ -72,10 +74,6 @@ header {
   color: lime;
 }
 
-/* main-link 'home' 'about' etc.... item styling */
-.nav-item {
-  font-size: 14px;
-}
 
 
 .nav-link {
@@ -441,7 +439,7 @@ li {
 
   /* main-nav font-size */
   .nav-link {
-    font-size: 13px;
+    font-size: .85em;
   }
 
   /* ---------- Fixed Positioning Example ------------ */
@@ -539,11 +537,9 @@ li {
     min-height: calc(100vh - 253px);   /* (253px) (-127 main-nav-margin) -81 secondary footer  -45 main-fixed-footer */
   }
 
-
-
    /* font  size increase for main-nav links */
   .nav-link {
-    font-size: 15px;
+    font-size: .95em;
   }
   /* this is the newroots logo on the main-nav */
   .newrootsBrand {
