@@ -30,13 +30,14 @@ body {
       background: white;
     }
 
+/* creating sticky-footer on small viewport heights and greater */
+.wrap {
+  min-height: calc(100vh - 126px);   /*   -81 secondary footer  -45 main-fixed-footer */
+}
+
 /* giving some breathing room to the header element */
 header {
   margin-bottom: 10px;
-}
-
-.wrap {
-  height: calc(100vh); /* 100 % of viewport height  */
 }
 
 /* Main Nav */
@@ -135,7 +136,7 @@ header {
 }
 
 /*  ------   Footers ---------- */
-.main-footer {  /* sticky-footer */
+.main-footer {  /* fixed-footer */
   position: fixed;
   bottom: 0;
   z-index: 999;
@@ -149,19 +150,19 @@ header {
               red;
 }
 
-.secondary-footer {
+.secondary-footer {  /* sticky-footer  */
   width: 100%;
   background: grey;
   padding: 20px 20px 20px 20px; /* this gives the paragraph elements some breathing room  */
-  margin:  20px 0;
-  margin-bottom: 45px;  /* margin to clear at scroll's end the sticky-footer's constant bottom 45px height */
+  margin:  0;  /*  0 margin to force sticky footer  */
+  margin-bottom: 45px;  /* margin to clear at scroll's end the fixed-footer's constant bottom 45px height */
   border-top: solid black 2px;
   background: linear-gradient(0deg, lightgreen, transparent 85%),
               linear-gradient(180deg, lightgreen, transparent 85%),
               darkgreen;
 }
 
-/* to-top href=#top circle-styled element in the persistent sticky footer  */
+/* to-top href=#top circle-styled element in the persistent fixed-footer  */
 .to-top {
   background: lime url('../img/arrow.svg') no-repeat center;
   background-size: 70%;
@@ -388,16 +389,31 @@ li {
 
 } /* end 700px media query */
 
+
+@media (min-width: 769px) {
+  /* img styling for the header img with the text overlay 'Welcome to Newroots' ... */
+  .backgroundHeader {
+    height: 500px;
+  }
+
+}  /* end 769 media query */
+
+
 @media (min-width: 969px) {
   /* mission statement font increase */
   #mission {
     font-size: 3em;
   }
 
-
 }  /* end 969 media query */
 
 @media (min-width: 990px) {
+
+  /* creating sticky-footer on small viewport heights and greater */
+  .wrap {
+    min-height: calc(100vh - 208px);   /* (208px) (-82 main-nav-margin) -81 secondary footer  -45 main-fixed-footer */
+  }
+
 
   /* Centered image caption text for the backgroundHeader: */
   .centered {
@@ -491,18 +507,17 @@ li {
       margin-top: 80px;
     }
 
-    /* img styling for the header img with the text overlay 'Welcome to Newroots' ... */
-    .backgroundHeader {
-      height: 500px;
-    }
-
-
-
-
 } /* end media query for 1025px and greater  */
 
 
 @media (min-width: 1050px) {
+
+  /* creating sticky-footer on small viewport heights and greater */
+  .wrap {
+    min-height: calc(100vh - 223px);   /* (208px) (-97 main-nav-margin) -81 secondary footer  -45 main-fixed-footer */
+  }
+
+
   /* this is the newroots logo on the main-nav */
   .newrootsBrand {
     height: 70px;
@@ -510,13 +525,21 @@ li {
 
   /* setting the margin for the header to the height of the main nav element so that is isn't overriden upon fixed navigation @ 1050px and greater.  */
   .backgroundHeader1  {
-    margin-top: 96px;
+    margin-top: 97px;
   }
 
 }
 
 
 @media (min-width: 1200px) {
+
+
+  /* creating sticky-footer on small viewport heights and greater */
+  .wrap {
+    min-height: calc(100vh - 253px);   /* (253px) (-127 main-nav-margin) -81 secondary footer  -45 main-fixed-footer */
+  }
+
+
 
    /* font  size increase for main-nav links */
   .nav-link {
@@ -529,8 +552,9 @@ li {
 
   /* setting the margin for the header to the height of the main nav element so that is isn't overriden upon fixed navigation @ 1200px and greater.  */
   .backgroundHeader1  {
-    margin-top: 126px;
+    margin-top: 127px;  /* 127  */
   }
+
 
 }
 /*******************************************************************************
