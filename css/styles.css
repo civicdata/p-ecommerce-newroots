@@ -282,8 +282,32 @@ li {
 *****************************************************************/
 
 
-  /* Here I am requesting that the child items be laid in a row horizontally
-    by targeting the child item of main-header2, and main-nav2 */
+@media only screen and (min-width: 600px) and (orientation: landscape) {
+  /* Centered image caption text for the backgroundHeader: will need media queries for this. */
+  .centered {
+      position: absolute;
+      top: 13%;
+      left: 50%;
+      transform: translate(-50%, -13%);
+      font-size: 1.4em;
+      color: crimson;
+      text-shadow: 2px 2px black;
+      width: 600px;
+  }
+
+  /* Centered image caption text for the backgroundHeader: will need media queries for this. */
+  .centered2 {
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -39%);  /* apparently, -50% is the left: property value  */
+    color: lightgreen;
+    text-shadow: 3px 3px  2px black;   /* third px value would be a blur effect */
+    font-size: 1.5em;
+    width: 600px;
+  }
+
+}  /* end 700px min-width and landscape orientation media query  */
 
   /* additionally, laying out the two child items in the parent .row as flex items; flex-direction: row; by default  */
   @media (min-width: 700px) {
