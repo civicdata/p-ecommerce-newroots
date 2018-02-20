@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/styles.css">  <!--I list this css file second in case I need to override the normalize.css file, as the last file listed takes precedence in the css stack -->
   </head>
 
-  <body data-spy="scroll" data-target=".navbar">  <!-- this code creates a spyscroll to inform the user where they are in the site by highlighting active links  -->
+  <body>  <!-- this code creates a spyscroll to inform the user where they are in the site by highlighting active links  -->
 
 
     <div class="wrap">
@@ -179,82 +179,144 @@
 
       </header>
 
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        Place Order Now
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header bg-success text-white">
+
+              <h5 class="modal-title" id="exampleModalLabel">Fresh Stop Market Order Form</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+
+              <form>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Order Now!</strong> Shares Going Fast!
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+                <h5 class=”mb-4”(gives 1.5rem margin)>Basic Info</h5>
+
+                <div class="form-group">
+                  <label class=”form-control-label sr-only” (use sr-only for assistive technologies if you don’t want the label title to show for all devices; but screen readers need the label element..) for="name">Name:</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter Name:">
+                </div>
+
+                <div class="form-group">
+                  <label class=”form-control-label sr-only” for="email">Email:</label>
+                  <input type="text" class="form-control" id="email" placeholder="Enter Email:">
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Choose Your Share</label>
+                    <select class="custom-select form-control" id="role">
+                           <option value="wic recipient">Wick Recipient ($6)</option>
+                           <option value="limited resources">Limited Resources ($12)</option>
+                           <option value="higher incomes">Higer Incomes ($25)</option>
+                           <option value="food justice share">Food Justice Share ($40)</option>
+                    </select>
+                </div>
+
+                <hr class=”my-4”>
+                <h4 class="mb-4">Which fruits and vegetables interest you the most?</h4>
+
+                <div class="form-check">
+                  <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Tomatos</span>
+                </label>
+                </div>
+
+                <div class="form-check">
+                  <label class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Beets</span>
+                </label>
+                </div>
+
+                    <hr class="mb-4">
+                    <h5 class="mb-4">Payment Info: Use your SNAP benefits, Cash or Credit-Card to purchase.</h5>
+
+                    <div class="form-row">  <!-- 'form-row' this will force tighter gutters of margin between elements -->
+                      <div class="col-lg-6 form-group">  <!-- this column will take up 6 columns of width at lg breakpoint and greater; .'form-group' will apply bottom-margin to the element -->
+                        <label for="cc-num">Card Number:</label>
+                        <input class="form-control" id="cc-num" type="text">
+                      </div>
+
+                      <div class="col-lg form-group">  <!-- the remaining two columns will share the remaining space at lg breakpoints and greater -->
+                        <label for="zip">Zip Code:</label>
+                        <input class="form-control" id="zip" type="text">
+                      </div>
+
+                      <div class="col-lg form-group">  <!-- this, the second of the two remaining two columns will share the remaining space at lg breakpoints and greater -->
+                        <label for="cvv">CVV:</label>
+                        <input class="form-control" id="cvv" type="text">
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <label class="col-lg-12">Expiration Date:</label>  <!-- '.col-lg-12'  will cause this elemeent to span the entire width of the viewport at lg breakpoints and greater -->
 
 
-        <!-- Begin three-column layout using flexbox -->
-        <div class="row-3">
-          <!-- begin flex-column-1 div -->
-          <div class="flex-column-1 flex-3">
-            <h2><a href="#">Fresh Stop Market</a></h2>
-            <img src="img/freshStopMarket.jpeg" class="freshStopMarketPhoto" alt="table layout of food">
-            <p>Learn more about Fresh Stop Markets, find the Fresh Stop Market nearest to you, and place an online order starting May, 2018</p>
-            <p><a href="#">Read more >></a></p>
-          </div>  <!-- end flex-column-1 div -->
+                    <div class="form-group col-lg-8">  <!-- '.col-lg-8' will cause the element to take up 8 columns of width at lg breakpoints and greater -->
+                      <select class="custom-select form-control" id="exp-month">
+                      <option value="1">1 - January</option>
+                      <option value="2">2 - February</option>
+                      <option value="3">3 - March</option>
+                      <option value="4">4 - April</option>
+                      <option value="5">5 - May</option>
+                      <option value="6">6 - June</option>
+                      <option value="7">7 - July</option>
+                      <option value="8">8 - August</option>
+                      <option value="9">9 - September</option>
+                      <option value="10">10 - October</option>
+                      <option value="11">11 - November</option>
+                      <option value="12">12 - December</option>
+                    </select>
+                    </div>
 
-          <!-- begin flex-column 2 -->
-          <div class="flex-column-2 flex-3">
-            <h2><a href="#">Donate to New Roots</a></h2>
-            <img src="img/donateToNewRoots.jpeg" class="freshStopMarketPhoto" alt="table of strawberries">
-            <p>Consider adding your support to those nurturing the next generation of veggie lovers. A monthly gift of $25 will cover the total expenses for one family to eat fresh, seasonal, organic, local produce for the entire growing season.</p>
-            <p><a href="#">Read more >></a></p>
-          </div>  <!-- end flex-column-2 div -->
+                    <div class="form-group col-lg">  <!-- '.col-lg' will cause this element to take up the reamining space (in this case it would be 4 columns of total width [4/12ths, because the above column takes up 8/12ths and there are a max of 12/12ths per row -->
+                      <select class="custom-select form-control" id="exp-year">
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                      </select>
 
-          <!-- begin flex-column 3 -->
-          <div class="flex-column-3 flex-3">
-            <h2><a href="#">Our Blogs</a></h2>
-            <img src="img/ourBlogs.jpeg" class="freshStopMarketPhoto" alt="local chef at her table of food">
-            <p>Check out our two blogs: one for announcements and community highlights, one for recipes.</p>
-            <p><a href="#">Read more >></a></p>
-          </div>  <!-- end flex-column-3 div -->
-        </div> <!-- end three column row layout div -->
+                    </div>
 
-
-
-        <!-- Begin two-column layout using flexbox -->
-        <div class="row-2">
-          <!-- begin flex-column-1 div -->
-          <div class="flex-column-1-text flex-2">
-            <h3>We need your help!</h3>
-            <p>We need your help organizing for the 2018 Fresh Stop Market Season!</p>
-            <p>Everyone is welcome to the <a href="food-justice-workshops-and-fresh-stop-training-institute.html">2018 Food Justice Workshops and Fresh Stop Market
-              Training Institute</a> starting February 2018.  Please call 502.509.6770 for details.</p>
-              <img src="img/tomato.jpg" class="freshStopMarketPhotoTomato" alt="tomato photo">
-          </div>  <!-- end flex-column-1 div -->
-
-          <!-- begin flex-column 2 -->
-          <div class="flex-column-2-text flex-2" id="flex-2">
-            <h3>Our Mission and Vision</h3>
-            <p><em id="mission">Just like air & water, everyone has a right to fresh food.</em></p>
-            <p>New Roots works with fresh food insecure communities to create sustainable systems for accessing the farm-fresh food we all need to be healthy and happy.</p>
-            <p><b><em>In a nutshell, we are uniting communities to spread food justice.</em></b></p>
-            <p>The main fruit of our labor are the <b>Fresh Stop Markets</b> — farm-fresh food markets that pop up at local churches,  community centers, and even in the courtyards of local businesses—in fresh food insecure neighborhoods. The food has been paid for in advance so that farmers don’t face the same degree of risk as they do with a standard farmers’ market. Every Market has a chef cooking up the very same vegetables and fruits that shareholders bring home. Our Beet Beat newsletter has recipes and stories from Fresh Stop Markets around the state.
-            <p>We also facilitate other powerful food justice <a href="initiatives.html">initiatives</a> such as the <a href="makeba-lee-fund.html">Makeba Lee Fund,</a> the <a href="food-justice-workshops-and-fresh-stop-training-institute.html">Fresh Stop Training Institute</a> and the <a href="gendler-grapevine-interfaith-food-justice.html">Gendler Grapevine Interfaith Food Justice,</a> all of which are tied to our community-run Fresh Stop Markets.</p>
-            <p><b>Seventeen(!) Fresh Stop Markets will operate under New Roots' umbrella during the 2018 growing season.</b></p>
-          </div>  <!-- end flex-column-2 div -->
-        </div> <!-- end 2-column row layout div -->
+                    </div>
 
 
-        <!-- Begin two-column layout using flexbox -->
-        <div class="row-2">
-          <!-- begin flex-column-1 div -->
-          <div class="flex-column-1-text flex-2">
-            <h3>Contact Us</h3>
-            <p>PHONE: 502.509.6770</p>
-            <p>EMAIL:<a href="mailto:info@newroots.org.com?Subject=Hello%20again" target="_top"> info@newroots.org</a></p>
-            <p>HOURS: 9 am-5 pm on Monday-Friday</p>
-            <p>Our office is based out of the beautiful <a href="tablecafe.org">Table Cafe</a> in Louisville's Portland neighborhood:</p>
-            <p>1800 Portland Avenue, Louisville, KY 40203</p>
+      <hr class="mb-4">
+      <button type="submit" class="btn btn-success btn-lg">Submit Order</button>
 
-          </div>  <!-- end flex-column-1 div -->
+              </form>
 
-          <!-- begin flex-column 2 -->
-          <div class="flex-column-2-text flex-2" id="flex-4">
-            <h3>We will be back up and running in May, 2018!</h3>
-            <p><em>It was a great Fresh Stop Market season! Thank you to our leaders and new friends for building a food justice movement in Louisville and beyond. Check back with us in March of 2018 for our Food Justice Training Institute (FSTI) workshops. The more the merrier.</em></p>
-            <p><b>Have a look at what we accomplished in our 2017 workshops <a href="food-justice-workshops-and-fresh-stop-training-institute.html">Food Justice Workshops and Fresh Stop Market Training Institute.</a> We use popular democracy methods: everyone is a teacher, and everyone can be a student. Everyone is welcome.</b></p>
-          </div>  <!-- end flex-column-2 div -->
-        </div> <!-- end 2-column row layout div -->
+            </div>
 
+          </div>
+        </div>
+      </div>
+
+
+
+</div> <!-- end .wrap div  -->
 
       <footer class="secondary-footer">
         <p>&copy; 2018 newroots.org</p>
@@ -266,7 +328,7 @@
       </footer>
 
 
-    </div> <!-- end .wrap div  -->
+    
 
 
 

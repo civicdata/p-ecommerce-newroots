@@ -28,10 +28,6 @@ body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height: 1.6;
       background: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      margin-bottom: 170px;
     }
 
 
@@ -303,6 +299,7 @@ li {
       display: flex;
       /* due ot the previous rule, the third column will wrap to a new line rather than share its line equally with the other two columns in the container.  */
       flex-wrap: wrap;
+      flex-direction: row;
     }
 
     /* ------ Flexbox  Layout------ */
@@ -311,7 +308,6 @@ li {
       .flex-3 {
         padding: 15px;
         flex: 1 33%;
-        flex-direction: column;
         margin-left: 5px;
         margin-right: 5px;
         margin-bottom: 10px;
@@ -323,13 +319,13 @@ li {
       display: flex;
       /* due ot the previous rule, the third column will wrap to a new line rather than share its line equally with the other two columns in the container.  */
       flex-wrap: wrap;
+      flex-direction: row;
     }
 
     .flex-2 {
       /* Aligning items to the bottom of a column using flexbox */
           padding: 15px;
           flex: 1 60%;
-          flex-direction: column;
           margin-left: 5px;
           margin-right: 5px;
           margin-bottom: 10px;
