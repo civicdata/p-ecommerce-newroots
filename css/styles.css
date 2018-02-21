@@ -29,7 +29,7 @@
 body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      background: white;
+      background: #ffad99;
     }
 
 /* creating sticky-footer on small viewport heights and greater */
@@ -99,6 +99,7 @@ header {
   height: 300px;
   width: 100%;
   margin: 0 auto;
+  border-bottom: solid 2px black;
 
 }
 
@@ -107,6 +108,7 @@ header {
     position: relative;
     text-align: center;
     margin-top: 0px;
+    box-shadow: 0 1.5px 0 0 black;
 }
 
 /* Centered image caption text for the backgroundHeader: will need media queries for this. */
@@ -181,8 +183,15 @@ header {
 ****************************** Base Element Styles *****************************
 *******************************************************************************/
 
+.contact-icon {
+  height: 40px;
+  display: inline-block;
+  margin: 10px 5px;
+}
+
 /* images for the body of the index.html page  */
 .freshStopMarketPhoto {
+  height: 200px;
   width: 90%;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -207,10 +216,10 @@ header {
 .flex-2 {
   width: 95%;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
   background: white;
-  box-shadow: 0 1.5px 0 0 black;
+  box-shadow: 0 3.5px 0 0 black;
   padding-bottom: 30px;
 }
 
@@ -228,7 +237,7 @@ p {
 /*  links in paragraphs elements */
 p > a {
   text-align: center;
-  font-size: .85em;
+  font-size: 1.2em;
   color: red;
   margin: 0 auto;
   text-decoration: underline;
@@ -243,7 +252,7 @@ h1 {
 }
 
 h2 {
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 h2 > a {
@@ -256,7 +265,7 @@ h2 > a {
 }
 
 h3 {
-  margin: 20px 10px;
+  padding: 20px;
 }
 
 /*  Changing the default bullets for lists to no list-style */
@@ -282,6 +291,11 @@ li {
 
 
 @media only screen and (min-width: 600px) and (orientation: landscape) {
+
+  .freshStopMarketPhoto {
+    height: 250px;
+  }
+
   /* Centered image caption text for the backgroundHeader: will need media queries for this. */
   .centered {
       position: absolute;
@@ -305,6 +319,7 @@ li {
     font-size: 1.5em;
     width: 600px;
   }
+
 
 }  /* end 700px min-width and landscape orientation media query  */
 
