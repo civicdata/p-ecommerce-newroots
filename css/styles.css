@@ -238,6 +238,7 @@ h2 > a {
 }
 
 h3 {
+  margin-top: 20px;
   text-align: center;
   padding: 20px;
   font-weight: bold;
